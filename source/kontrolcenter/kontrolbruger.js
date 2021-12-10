@@ -26,11 +26,17 @@ router.post("/login", (req, res) => {
     }
 });
 
-router.post("/logout", (req,res) => {
-    const user = new model(req.body.email, req.body.password);
-    db.findUser(user);
-    res.status(200).send(true);
-})
+router.get('/logout', (req, res) => {
+    req.logout();
+    if (req.session) {
+      req.session.destroy(function (err) {
+        if (err) {
+          console.log(err)
+        }
+        console.log("Logged out");
+      });
+    }
+  });
 
 
 router.delete("/delete", (req, res) => {

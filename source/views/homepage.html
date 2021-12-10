@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src= "homepage.js"></script>
+    <script src= "homepage.js" async defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    <h1>Bazaar</h1>
-    <form id="delete">
-        <input value= "Delete" type="submit"/>
+    <h1>B A Z A A R</h1>
+
+
+ <form id="delete">
+     <input value="Delete" type="submit"/>
+ </form>
+
+ <form id="logout">
+    <input value="logout" type="submit"/>
+</form>
+
+
+ 
+
+
+    <h2>OPRET EN VARER</h2>
+    <form id="submitForm">
+       Title: <input type="input" name="title"><br/>
+       Price: <input type="number" name="price"><br/>
+       Brand: <select name="brand">
+            <option value="Samsung">Samsung</option>
+            <option value="Royal Copenhagen">Bærbar</option>
+            <option value="Georg Jensen">Sko</option>
+        </select>
+       File: <input type="file" name="thumbnail"><br/>
+       Submit: <button type="submit">Opret varer</button>
     </form>
+
+    Refresh: <button id="refresh">Refresh</button>
+    <table id="list">
+    </table>
 </body>
 </html>

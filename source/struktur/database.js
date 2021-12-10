@@ -16,6 +16,7 @@ class database {
     openFile(fileName) {
     const fil = fs.readFileSync(ABSOLUTE_PATH + fileName);
     return JSON.parse(fil);
+    
     }
 
     saveUser(user){
